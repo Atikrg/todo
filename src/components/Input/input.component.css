@@ -8,6 +8,8 @@
     outline: none;
     margin-top: 385px;
     border-radius: 12px;
+  
+  
 }
 
 .add-btn{
@@ -20,6 +22,10 @@
     color: white;
     
     border: none;
+}
+
+.add-btn:hover{
+    background-color: #FFE4C9;
 }
 
 .add-btn:hover{

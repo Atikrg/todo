@@ -12,7 +12,10 @@ const Input = () => {
       event.preventDefault();
       if(input === ''){
         alert("Enter tasks")
-      }else{
+      }
+      
+      if(input.length <= 25)
+    {
         setTasks([...tasks, input.trim()]);
 
       }

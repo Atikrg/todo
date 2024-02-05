@@ -13,9 +13,10 @@ const Tasks = () => {
     return (
   <form className="tasks__lists">
         {
+          
              
         tasks.map((item, index) => (
-          <div key={index}>
+          <div key={index} className='list_tasks'>
       
             <div
             className='mytask'
@@ -26,10 +27,13 @@ const Tasks = () => {
             >
               {item}
             </div>
-            <div className='divider'></div>
+            <div className='delete'>
+              X
+            </div>
           </div>
         ))  
-            }
+      }
+      <div className='divider'></div>
       </form> 
     );
   }
