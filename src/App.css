@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+  color: white;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.container {
+  background-color: #E78895;
+  border-radius: 12px;
+  width: 90%; /* Adjusted width for responsiveness */
+  max-width: 30em; /* Maximum width to maintain the container size */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Added padding for better spacing */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    height: 30em; /* Adjusted height for larger screens */
+  }
+}
