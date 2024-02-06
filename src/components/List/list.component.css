@@ -1,0 +1,12 @@
+.list_tasks {
+    display: flex;
+    flex-direction: row;
+    width: 510px;
+    
+}
+.mytask {
+    color: #FFE4C9;
+    font-size: 20px;
+    padding: 12px;
+
+}

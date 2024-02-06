@@ -1,41 +1,23 @@
-import React, {useState, useContext } from 'react';
+import React, {useContext } from 'react';
 import './tasks.component.css';
-import {TodoContext } from '../../contexts/input.context';
+import { TodoContext } from '../../contexts/input.context';
+import List from '../List/list.component';
 
 const Tasks = () => {
-  const {tasks} = useContext(TodoContext);
-  const [isStriked , setStriked] = useState(false);
- 
-
-    const handleStrike = function(){
-        setStriked(!isStriked);
-    }
-    return (
-  <form className="tasks__lists">
-        {
-          
-             
-        tasks.map((item, index) => (
-          <div key={index} className='list_tasks'>
-      
-            <div
-            className='mytask'
-              style={{
-                textDecoration: isStriked ? 'line-through' : 'none'
-              }}
-              onClick={handleStrike} // Assuming handleStrike is a function
-            >
-              {item}
-            </div>
-            <div className='delete'>
-              X
-            </div>
-          </div>
-        ))  
-      }
+  const {tasks } = useContext(TodoContext);
+  console.log(tasks);
+    
+  return (
+    <form className="tasks__lists">
+      {
+        tasks.map(({item, index}) => (
+         <List key={index} listItem = {item}/>
+         ))
+        }
+        <br></br>
       <div className='divider'></div>
-      </form> 
-    );
-  }
+    </form>
+  );
+}
 
 export default Tasks;

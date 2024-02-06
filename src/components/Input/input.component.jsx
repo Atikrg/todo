@@ -27,7 +27,6 @@ const Input = () => {
     return (
       
       <form onSubmit = {handleSubmit}>
-          {console.log(tasks)}
             <input
             name = "text"
             onChange={(e)=>setInput((e.target.value))}

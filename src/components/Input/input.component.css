@@ -1,18 +1,22 @@
-.input_todo{
+.input_todo {
     padding: 6px;
     width: 254px;
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
-    border-color:#FFE4C9 ;
+    border-color: #FFE4C9;
     border-radius: 2px;
     outline: none;
     margin-top: 385px;
     border-radius: 12px;
-  
-  
+
+
 }
 
-.add-btn{
+.list_tasks{
+    margin: 14px;
+}
+
+.add-btn {
     border-radius: 23px;
     padding: 12px;
     width: 50px;
@@ -20,18 +24,18 @@
     font-size: 25px;
     background-color: black;
     color: white;
-    
+
     border: none;
 }
 
-.add-btn:hover{
+.add-btn:hover {
     background-color: #FFE4C9;
 }
 
-.add-btn:hover{
+.add-btn:hover {
     color: white;
-    
-    .add-btn:focus{
+
+    .add-btn:focus {
         opacity: 34%;
     }
 }
