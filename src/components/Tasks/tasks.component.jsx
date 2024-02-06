@@ -1,22 +1,24 @@
-import React, {useContext } from 'react';
+import React, {useContext, useState } from 'react';
 import './tasks.component.css';
 import { TodoContext } from '../../contexts/input.context';
-import List from '../List/list.component';
+import Todo from '../TodoList/todo.component';
 
 const Tasks = () => {
   const {tasks } = useContext(TodoContext);
   console.log(tasks);
+/*    */
+  
     
   return (
-    <form className="tasks__lists">
+    <div className='tasks__lists'>
       {
-        tasks.map(({item, index}) => (
-         <List key={index} listItem = {item}/>
-         ))
+        tasks.map((item, index) => {
+          return <Todo key= {index} text = {item} />
+        })
         }
-        <br></br>
       <div className='divider'></div>
-    </form>
+
+    </div>
   );
 }
 

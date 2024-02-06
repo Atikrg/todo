@@ -20,7 +20,7 @@ const Input = () => {
 
       }
 
-      setInput("");
+  //    setInput("");
       
     }
 

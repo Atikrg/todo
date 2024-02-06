@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <h1 className='title'>Todo List</h1>
       <div className='container'>
+        
         <Tasks/>
         <Input/>
       </div>
