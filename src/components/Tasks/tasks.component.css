@@ -6,8 +6,9 @@
     margin-left: 12px;
     overflow-y: auto;
     border-radius: 4px;
+  /*   overflow-y: auto; */
    -ms-overflow-style: none; 
-    scrollbar-width: none; 
+   scrollbar-width: none;  
 }
 
 .list_tasks {
@@ -17,14 +18,18 @@
     justify-content: space-around;
 }
 
-
-
-
 .mytask {
     color: #FFE4C9;
     font-size: 20px;
     padding: 12px;
     height: 25px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.delete{
+    margin-left: 65%;
+    cursor: pointer;
 }
 
 .divider {
@@ -33,5 +38,6 @@
     height: 1px;
     border-radius: 50px;
     margin-left: 4px;
+    position: relative;
 }
 

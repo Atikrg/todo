@@ -14,6 +14,7 @@
 
 .list_tasks{
     margin: 14px;
+  
 }
 
 .add-btn {
@@ -25,16 +26,11 @@
     background-color: black;
     color: white;
     border: none;
+    opacity: 34%;
 }
 
 .add-btn:hover {
-    background-color: #FFE4C9;
-}
-
-.add-btn:hover {
-    color: white;
-
-    .add-btn:focus {
-        opacity: 34%;
-    }
+    background-color: black;
+    opacity: 100%;
+    
 }

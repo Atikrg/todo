@@ -1,31 +1,38 @@
-import React from 'react';
 import './input.component.css';
-import { useState, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { TodoContext } from '../../contexts/input.context';
 
 
 const Input = () => {
     const [input, setInput] = useState("");
-    const {tasks, setTasks} = useContext(TodoContext); // <--context should come here
-  
+   /*  const {tasks, setTasks} = useContext(TodoContext); */ // <--context should come here
+    const {dispatch} = useContext(TodoContext);
+    
     const handleSubmit = (event)=>{
       event.preventDefault();
       if(input === ''){
         alert("Enter tasks")
+        return;
       }
       
       if(input.length <= 25)
-    {
-        setTasks([...tasks, input.trim()]);
+      {
+        dispatch({
+          type: 'SET_TASK',
+          payload: input.trim()
+        });
+        // setTasks([...tasks, input.trim()]);
+        setInput('');
 
+      }else{
+        alert("length should be less than 25");
+        setInput('')
       }
-
-  //    setInput("");
       
     }
 
     return (
-      
+   
       <form onSubmit = {handleSubmit}>
             <input
             name = "text"
