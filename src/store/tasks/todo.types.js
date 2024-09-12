@@ -1,0 +1,4 @@
+export const TODO_ACTION_TYPES = {
+      SET_TASK: 'SET_TASK',
+      DELETE_TASK: 'DELETE_TASK'
+}

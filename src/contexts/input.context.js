@@ -79,7 +79,6 @@ export const TodoProvider = ({children}) =>{
   };
 
   const addTaskHandler = task =>{
-    
     dispatch(createAction( TODO_ACTION_TYPES.SET_TASK,task));
   }
 

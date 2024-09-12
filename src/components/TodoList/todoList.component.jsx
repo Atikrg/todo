@@ -1,23 +1,17 @@
-import React, { useState, useContext } from "react";
-import { TodoContext } from "../../contexts/input.context";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { deleteTaskHandler } from "../../store/tasks/todo.action";
 
 const Todo = (props) => {
   const [isStriked, setStriked] = useState(false);
+  const dispatch = useDispatch();
 
-  const { tasks, setTasks, dispatch } = useContext(TodoContext);
-  const handleStrike = function () {
+  const handleStrike = () => {
     setStriked(!isStriked);
   };
 
-  const deleteHandlerTask = () => {
-    /* let copyTask = [...tasks];
-    copyTask.splice(i, 1);
-    setTasks(copyTask); */
-    console.log(props.id)
-    dispatch({
-      type: 'DELETE_TASK',
-      payload: props.id
-    })
+  const handleDelete = () => {
+    dispatch(deleteTaskHandler(props.id)); // Invoke deleteTaskHandler with the task id
   };
 
   return (
@@ -29,7 +23,7 @@ const Todo = (props) => {
           listStyleType: "none",
           textDecoration: isStriked ? "line-through" : "none",
         }}
-        onClick={handleStrike} // Assuming handleStrike is a function
+        onClick={handleStrike} // Handle task strike-through
       >
         {props.text}
       </li>
@@ -38,10 +32,7 @@ const Todo = (props) => {
           listStyleType: "none",
           marginTop: "14px",
         }}
-        onClick={() => {
-          deleteHandlerTask()
-
-        }}
+        onClick={handleDelete} // Handle delete
         className="delete"
       >
         X
